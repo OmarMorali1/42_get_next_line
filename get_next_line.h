@@ -6,7 +6,7 @@
 /*   By: ommorali@student.42amman.com <ommorali>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 14:44:24 by ommorali          #+#    #+#             */
-/*   Updated: 2026/10/12 09:19:20 by ommorali@st      ###   ########.fr       */
+/*   Updated: 2026/10/12 12:46:28 by ommorali@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_file
 char	*get_next_line(int fd);
 int		found_newline(t_list *lst);
 void	ft_lstadd_back(t_list **lst, char *buffer);
-void	free_all(t_list **lst);
+int		free_all(t_list **lst);
 char	*free_file(t_file **lst, int fd);
 size_t	get_line_len(t_list *lst);
 
