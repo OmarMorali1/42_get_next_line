@@ -6,7 +6,7 @@
 /*   By: ommorali@student.42amman.com <ommorali>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:19:10 by ommorali@st       #+#    #+#             */
-/*   Updated: 2026/10/12 12:19:33 by ommorali@st      ###   ########.fr       */
+/*   Updated: 2026/10/19 10:55:35 by ommorali@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	found_newline(t_list *lst)
 		i = 0;
 		while (lst->content[i])
 		{
-			if (lst->content[i] == '\n' || !lst->content[i])
+			if (lst->content[i] == '\n')
 				return (1);
 			i++;
 		}
@@ -56,12 +56,12 @@ void	ft_lstadd_back(t_list **lst, char *buffer)
 	last->next = node;
 }
 
-void	free_all(t_list **lst)
+int	free_all(t_list **lst)
 {
 	t_list	*temp;
 
 	if (!lst || !*lst)
-		return ;
+		return (1);
 	while (*lst)
 	{
 		temp = (*lst)->next;
@@ -70,6 +70,7 @@ void	free_all(t_list **lst)
 		*lst = temp;
 	}
 	*lst = NULL;
+	return (1);
 }
 
 size_t	get_line_len(t_list *lst)

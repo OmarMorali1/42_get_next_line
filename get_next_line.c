@@ -6,7 +6,7 @@
 /*   By: ommorali@student.42amman.com <ommorali>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 13:56:53 by ommorali          #+#    #+#             */
-/*   Updated: 2026/10/12 12:48:52 by ommorali@st      ###   ########.fr       */
+/*   Updated: 2026/10/19 10:50:26 by ommorali@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,15 +104,14 @@ static int	clean_lst(t_list **lst)
 	if (!last->content[i] && free_all(lst))
 		return (0);
 	node = malloc(sizeof(t_list));
-	if (!node || !copy_clean_content(last, node, i))
+	if (node && copy_clean_content(last, node, i) && free_all(lst))
 	{
-		free(node);
-		return (0);
+		node->next = NULL;
+		*lst = node;
+		return (1);
 	}
-	node->next = NULL;
-	free_all(lst);
-	*lst = node;
-	return (1);
+	free(node);
+	return (0);
 }
 
 char	*get_next_line(int fd)
