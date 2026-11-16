@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommorali@student.42amman.com <ommorali>    +#+  +:+       +#+        */
+/*   By: ommorali <ommorali@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 14:44:24 by ommorali          #+#    #+#             */
-/*   Updated: 2026/10/12 12:46:28 by ommorali@st      ###   ########.fr       */
+/*   Updated: 2026/10/21 08:26:49 by ommorali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
